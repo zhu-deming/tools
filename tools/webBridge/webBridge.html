@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+<br/><br/><br/><br/><br/>
+<a href="javascript:location=location;">刷新页面</a><br/><br/>
+ip : <input id="ip" type="text" value="10.61.5.160"/><br/>
+port : <input id="port" type="text" value="8081"/><br/><br/>
+<button id="btn">连接Socket连接</button>
+<button id="b1">getPoiInfo</button>
+<p id="transEle" style="display:none;"></p>
+
+
+
+
+
+<input id="t1" type="text" value='{"code": "1", "timestamp": "1413709436.07", "version": "2.0-2.0.4290.1858", "result": "true", "poiinfo": {"idDictionaries": {"dianping_api_id": "2207584", "sinapoiid": "B2094654D16CAAF94393", "gdgjz_id": "52c67b1057d6d21294378b15", "mining_shape_id": "J50F00201912983", "dianping_refresh_id": "16116951", "weibo_sina_id": "B2094654D16CAAF94393", "sndt_id": "B000A83M61"}, "pic": {"cover": {"url": "http://i1.dpfile.com/pc/f197e8daf6757a82a8a9eebb35adf92b(700x700)/thumb.jpg", "src_type": "dianping_api", "weight": 1000, "title": null}, "gallery": [{"url": "http://i1.dpfile.com/pc/f197e8daf6757a82a8a9eebb35adf92b(700x700)/thumb.jpg", "src_type": "dianping_api", "weight": 1000, "title": null}, {"url": "http://i1.dpfile.com/pc/9ff1dbaec68db0732db5dc48de4748e0(700x700)/thumb.jpg", "src_type": "dianping_api", "weight": 0, "title": null}, {"url": "http://i2.dpfile.com/pc/f155fe883e16c74af8e8d4055fc3b8ae(700x700)/thumb.jpg", "src_type": "dianping_api", "weight": 0, "title": null}, {"url": "http://i1.dpfile.com/pc/6b5483ee2a7cf0095d69843fc07603b9(700x700)/thumb.jpg", "src_type": "dianping_api", "weight": 0, "title": null}, {"url": "http://i3.dpfile.com/pc/a9df08ed3599c73adecd2058d834cc09(700x700)/thumb.jpg", "src_type": "dianping_api", "weight": 0, "title": null}], "pic_count": "8"}, "rti": {"dining_info": {"can_resell": "0", "book_flag": "0", "book_url": null, "top_rank": null, "src_type": null}, "isHaveDynamic": "false", "takeout_info": {"can_resell": "0", "src_type": null, "takeout_flag": "0", "takeout_url": null}, "station_info": {"entrance_info": [{"reco_info": "车辆临时停靠点", "reco_code": "1", "name": "", "guide_info": "送人临时停车点、出租车下车点", "rel_poiid": "B000A81GCZ", "poiid": ""}, {"reco_info": "最近公交站", "reco_code": "2", "name": "", "guide_info": "距离进站口最近公交站", "rel_poiid": "BV10000101", "poiid": ""}, {"reco_info": "最近公交站", "reco_code": "2", "name": "", "guide_info": "距离进站口最近公交站", "rel_poiid": "BV10013557", "poiid": ""}, {"reco_info": "车辆临时停靠点", "reco_code": "4", "name": "", "guide_info": "接人临时停车点", "rel_poiid": "B0FFFE2MRG", "poiid": ""}], "pois_list": [{"name": "北京西站(南进站口)", "tag": {"child_shortname": [{"p": null, "v": "南进站口"}]}, "address": "莲花池东路118号", "y": "39.893595", "x": "116.321258", "poiid": "B000A81GCZ"}, {"y": "39.893439", "x": "116.321575", "name": "北京西站(南二出站口)", "poiid": "B0FFFE2MRG", "address": "莲花池东路118号(近羊坊店路)"}, {"name": "北京西站南广场", "tag": {"child_shortname": [{"p": null, "v": "南二售票处"}]}, "address": "广莲路13号", "y": "39.893596", "x": "116.321294", "poiid": "B000A7IW9J"}, {"name": "西客站环岛火炬东侧(公交站)", "tag": {"child_shortname": [{"p": null, "v": "西客站环岛火炬东侧"}]}, "address": null, "y": "39.893349", "x": "116.323354", "poiid": "BV10013557"}, {"y": "39.897221", "x": "116.319714", "name": "北京西站(公交站)", "poiid": "BV10000101", "address": null}]}, "review": [{"review_list": [{"review_weburl": "http://www.dianping.com/review/55523679", "author": "红衫绿裤", "tag_review": null, "review": "下了火车就上了地铁，挺方便的，因为西安火车站实在不忍直视，所以觉得别的火车站都挺不错的", "time": "2014-05-04 04:58:00", "score": "4.0", "review_appurl": {"android": null, "ios": null}, "review_wapurl": "http://m.dianping.com/shop/review/55523679", "recommend": null, "pic_info": null}, {"review_weburl": "http://www.dianping.com/review/55478842", "author": "蜡笔小冰", "tag_review": null, "review": "对北京西站熟悉的不能再熟悉了，每次回家都是在北京西站坐车，记得第一次在北京西站坐车回家的时候很紧张，人很多，比我们家那边的火车站大很多，这次回家是坐的半夜的车，有一种不一样的感觉，晚上的时候也可以自主...", "time": "2014-05-03 10:20:00", "score": "4.0", "review_appurl": {"android": null, "ios": null}, "review_wapurl": "http://m.dianping.com/shop/review/55478842", "recommend": null, "pic_info": null}, {"review_weburl": "http://www.dianping.com/review/55470495", "author": "朵朵云彩2", "tag_review": null, "review": "一来北京就在这里座火车今天回家，现在坐火车也比较少啦，要不自己开车要不飞机，，不过今天在里面吃啦个拉35。", "time": "2014-05-02 23:27:00", "score": "4.0", "review_appurl": {"android": null, "ios": null}, "review_wapurl": "http://m.dianping.com/shop/review/55470495", "recommend": null, "pic_info": null}, {"review_weburl": "http://www.dianping.com/review/55388171", "author": "kiwikwok", "tag_review": null, "review": "大学毕业后，就没再进入过这里。突然好怀念跟同学，每年冬夏穿梭在这里的日子。", "time": "2014-05-01 08:08:00", "score": "4.0", "review_appurl": {"android": null, "ios": null}, "review_wapurl": "http://m.dianping.com/shop/review/55388171", "recommend": null, "pic_info": null}, {"review_weburl": "http://www.dianping.com/review/55368386", "author": "xisulhx", "tag_review": null, "review": "已经不记得去过多少次了。第一次去还是大一暑假的时候，去北京看老妈。第一次一个人去北京，人生地不熟的情况下还找到了车去舅舅家。北京西站还是很大的，环境也挺不错，不像北京站，已经很旧了。西站外面有个大广场...", "time": "2014-04-30 17:47:00", "score": "3.0", "review_appurl": {"android": null, "ios": null}, "review_wapurl": "http://m.dianping.com/shop/review/55368386", "recommend": null, "pic_info": null}], "review_all_weburl": "http://www.dianping.com/shop/2207584/review_all", "src_url": null, "review_all_appurl": {"android": "dianping://review?id=2207584", "ios": "dianping://review?id=2207584"}, "review_all_wapurl": "http://m.dianping.com/shop/2207584/review_all", "src_type": "dianping_api", "market": "review", "review_num": "799"}], "movie_privilege": {"privilege": "0", "privilege_content": "", "privilege_link": ""}, "movies": [], "scenic_ticket_flag": [], "isHaveHotel": "false", "activity": "", "cpr_info": {"subscribe_flag": "0"}}, "deep": [{"src_type_mix": "gdgjz", "opentime": null, "src_id": "52c67b1057d6d21294378b15", "business": "traffic", "info_wapurl": null, "info_appurl": {"ios_appurl": null, "android_appurl": null}, "info_weburl": null, "label": {"hsrail": "1", "bullet": "1"}, "src_type": "cms_deep_merge", "opentime2": null, "pic_info": []}], "spec": {"sndt": {"fl_info": [{"fl_nona": "", "fl_no": "-1", "fl_name": ""}, {"fl_nona": "", "fl_no": "-2", "fl_name": ""}, {"fl_nona": "", "fl_no": "1", "fl_name": ""}, {"fl_nona": "", "fl_no": "2", "fl_name": ""}, {"fl_nona": "", "fl_no": "3", "fl_name": ""}]}}, "base": {"checked": "1", "name": "北京西站", "business": "traffic", "brand_logo": "", "keytype": "", "address": "莲花东路118号", "parent_rel": [], "telephone": "010-95105105;010-51824233", "new_type": "150200", "classify": "火车站", "new_keytype": "交通设施服务;火车站;火车站", "pixelx": "220953448", "pixely": "101726365", "y": "39.894827", "x": "116.321665", "brand_title": "", "poiid": "B000A83M61"}, "tag": null, "src_info": {"dianping_api": {"logo": "", "name_en": "dianping", "name_cn": "大众点评", "tel": ""}, "muku_photo": null, "gdgjz": {"logo": "", "name_en": "gdgjz", "name_cn": "高德公交组测试", "tel": ""}, "muku": {"logo": "", "name_en": "muku", "name_cn": "高德母库", "tel": ""}, "cms_deep_merge": null}}, "message": "Successful."}'/><button id="s1">发送</button>
+</body>
+<script type="text/javascript" src="js/native.js"></script>
+<script type="text/javascript">
+$(function() {
+
+var ws = {
+    
+    socket: null,
+    
+    transEle: document.getElementById("transEle"),
+    
+    _onopen: function() {
+        alert("opened");
+    },
+    
+    _onclose: function() {
+        ws.socket = null;
+        alert("closed");
+    },
+    
+    _onmessage: function(evt) {
+        var data = evt.data;
+        ws.transEle.innerHTML = data;
+        data = JSON.parse(ws.transEle.innerHTML);
+        //alert(JSON.stringify(data));
+        var _key = data._key;
+        
+        if("chrome" === data._client) {
+            delete data._client;
+            delete data.progress;
+            poiBridge.send(data, function(data){
+                var mes = {
+                    _client: "mobile",
+                    _key: _key,
+                    data: data
+                };
+                ws.sendMessage(mes);
+            });
+        }
+    },
+    
+    createSocketMethod: function() {
+        this.socket.onopen = this._onopen;
+        this.socket.onclose = this._onclose;
+        this.socket.onmessage = this._onmessage;
+    },
+    
+    sendMessage: function(message) {
+        var _data = JSON.stringify(message.data),
+            _length = _data.length,
+            _maxLength = 5000,
+            _count = Math.floor((_length + _maxLength) / _maxLength);
+        for(var i = 0; i < _count; i++) {
+            if(i == (_count - 1)) {
+                message.part = 9999999;
+            } else {
+                message.part = i + 1;
+            }
+            message.data = _data.slice(_maxLength * i, _maxLength * (i + 1));
+            var _m = JSON.stringify(message);
+            this.socket.send(_m);
+        }
+    },
+    
+    connect: function(hostname, port) {
+        if(this.socket) {
+            alert("socket已连接！");
+        }
+        if("WebSocket" in window) {
+            var host = "ws://" + hostname + ":" + port + "/websocket/chat";
+            this.socket = new WebSocket(host);
+        } else {
+            alert("不支持WebSocket");
+            return;
+        }
+        this.createSocketMethod();
+    },
+    
+    init: function() {
+        $("#btn").on("click", function() {
+            var ip = $("#ip").val(),
+                port = $("#port").val();
+            ws.connect(ip, port);
+        });
+        
+        
+        
+        document.getElementById("b1").addEventListener("click", function() {
+            poiBridge.send({
+                action: "getPoiInfo",
+                _action: "setPoiInfo"
+            }, function(data) {
+                alert(data);
+            });
+        }, false);
+        
+        document.getElementById("s1").addEventListener("click", function() {
+            var val = document.getElementById("t1").value;
+            var mes = {
+                _client: "mobile",
+                _key: "METHOD_1123",
+                data: document.getElementById("t1").value
+            };
+            ws.sendMessage(mes);
+        }, false);
+        
+    }
+
+};
+
+
+ws.init();
+
+
+});
+</script>
+</html>

@@ -1,0 +1,36 @@
+{
+    "name": "webdebugtool",
+    "version": "1.0",
+    "manifest_version": 2,
+    "devtools_page": "devtools.html",
+    "permissions": [
+        "tabs",
+        "unlimitedStorage",
+        "background",
+        "http://*/"
+    ],
+    "web_accessible_resources": [
+        "js/WebViewJavascriptBridge.js"
+    ],
+    "icons": {
+        "128": "img/icon_256.png",
+        "64": "img/icon_256.png",
+        "32": "img/icon_256.png",
+        "16": "img/icon_256.png"
+    },
+    "background": {
+        "page": "background.html"
+    },
+    "browser_action": {
+        "default_title": "",
+        "default_icon": "img/icon_256.png",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["file:///*/*", "http://*/*", "https://*/*"],
+            "js": ["js/database.js", "js/main.js"],
+            "run_at": "document_end"
+        }
+    ]
+}

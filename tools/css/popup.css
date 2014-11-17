@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+body {
+    min-height: 100px;
+    min-width: 600px;
+}
+
+.item {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}
+
+.item textarea {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    width: 250px;
+}
+
+.common_saved_table {
+    width: 100%;
+}
+
+.common_saved_table .action_td {
+    width: 120px;
+}
+
+.common_saved_table textarea {
+    width: 100%;
+}
+
+.common_saved_table .click_td {
+    width: 60px;
+    text-align: center;
+}

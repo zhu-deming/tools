@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="css/popup.css"/>
+</head>
+<body>
+<div id="body">
+    <input id="ip" type="text" value="10.61.5.160"/>
+    <input id="port" type="text" value="8081"/>
+    <button id="socket">socket连接</button>
+    <hr/>
+    <div>
+        poiid:<input id="poiid" type="text"/>
+        <a id="savePoiid" href="javascript:void(0);">保存</a>
+        <a id="clearPoiid" href="javascript:void(0);">清空</a>
+    </div>
+    <div id="newCommonItem">
+        <p>添加客户端接口：</p>
+
+        <div id="addCommonDiv" class="item">
+            <span>action:</span><input id="commonAction" type="text" value=""/>
+            <span>测试数据:</span><textarea id="commonData" rows="1"></textarea>
+            <a id="saveCommon" href="javascript:void(0);">保存</a>
+        </div>
+    </div>
+
+    <div id="newAosItem">
+        <p>添加AOS接口：</p>
+
+        <div id="addAosDiv" class="item">
+            <span>url:</span><input id="aosUrl" type="text" value=""/>
+            <span>测试数据:</span><textarea id="aosData" rows="1"></textarea>
+            <a id="saveAos" href="javascript:void(0);">保存</a>
+        </div>
+    </div>
+
+    <hr/>
+
+    <div id="commonSaved">
+        <p>保存的客户端接口</p>
+        <table id="commonSavedTable" class="common_saved_table"></table>
+    </div>
+
+    <hr/>
+
+    <div id="aosSaved">
+        <p>保存的AOS接口</p>
+        <table id="aosSavedTable" class="common_saved_table"></table>
+    </div>
+
+</div>
+</body>
+
+<script src="js/database.js"></script>
+<script src="js/popup.js"></script>
+</html>
